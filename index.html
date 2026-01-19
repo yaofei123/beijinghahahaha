@@ -1,0 +1,2521 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>北京八日深度游终极日程（2026.01.28 - 02.04）</title>
+    <meta name="description" content="北京 8 日深度游（2026.01.28-02.04）纯静态行程单：皇城核心区、北城园林与长城，含换宿、交通与预约提醒。" />
+    <style>
+      @font-face {
+        font-family: "BJ Young Serif";
+        src: url("./.claude/skills/canvas-design/canvas-fonts/YoungSerif-Regular.ttf") format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "BJ Instrument Sans";
+        src: url("./.claude/skills/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf") format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: "BJ Instrument Sans";
+        src: url("./.claude/skills/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf") format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: "BJ DM Mono";
+        src: url("./.claude/skills/canvas-design/canvas-fonts/DMMono-Regular.ttf") format("truetype");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      :root {
+        color-scheme: light;
+        --paper: #fbf6ea;
+        --paper-2: #f3ede0;
+        --ink: #14110f;
+        --ink-2: rgba(20, 17, 15, 0.78);
+        --ink-3: rgba(20, 17, 15, 0.58);
+        --stroke: rgba(20, 17, 15, 0.14);
+        --stroke-2: rgba(20, 17, 15, 0.22);
+        --shadow: 0 18px 44px rgba(20, 17, 15, 0.16);
+        --shadow-soft: 0 10px 24px rgba(20, 17, 15, 0.1);
+        --seal: #b42318;
+        --seal-2: #d92d20;
+        --jade: #0f766e;
+        --gold: #8a6a00;
+        --radius: 18px;
+        --radius-sm: 14px;
+        --content: 1120px;
+        --font-display: "BJ Young Serif", "Songti SC", "STSong", serif;
+        --font-body: "BJ Instrument Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          "Noto Sans CJK SC", sans-serif;
+        --font-mono: "BJ DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        color: var(--ink);
+        background: radial-gradient(900px 520px at 14% 0%, rgba(180, 35, 24, 0.12), transparent 64%),
+          radial-gradient(980px 640px at 95% 12%, rgba(15, 118, 110, 0.1), transparent 66%),
+          radial-gradient(1200px 700px at 36% 100%, rgba(138, 106, 0, 0.08), transparent 62%),
+          linear-gradient(180deg, var(--paper), var(--paper-2));
+        line-height: 1.62;
+        letter-spacing: 0.1px;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E");
+        mix-blend-mode: multiply;
+        opacity: 0.1;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        inset: -40px;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+            90deg,
+            rgba(20, 17, 15, 0.03) 0,
+            rgba(20, 17, 15, 0.03) 1px,
+            transparent 1px,
+            transparent 30px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(20, 17, 15, 0.03) 0,
+            rgba(20, 17, 15, 0.03) 1px,
+            transparent 1px,
+            transparent 30px
+          ),
+          radial-gradient(700px 420px at 20% 0%, rgba(20, 17, 15, 0.06), transparent 62%),
+          radial-gradient(780px 560px at 100% 10%, rgba(20, 17, 15, 0.05), transparent 64%),
+          radial-gradient(1000px 700px at 55% 110%, rgba(20, 17, 15, 0.06), transparent 62%);
+        opacity: 0.8;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid rgba(180, 35, 24, 0.34);
+        outline-offset: 3px;
+        border-radius: 12px;
+      }
+
+      .wrap {
+        max-width: var(--content);
+        margin: 0 auto;
+        padding: 18px 18px 64px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(251, 246, 234, 0.78);
+        border-bottom: 1px solid var(--stroke);
+      }
+
+      .topbar::after {
+        content: "";
+        display: block;
+        height: 10px;
+        background: radial-gradient(circle at 12px 50%, transparent 6px, rgba(20, 17, 15, 0.12) 6px, rgba(20, 17, 15, 0.12) 6.7px, transparent 7px)
+          repeat-x;
+        background-size: 24px 10px;
+        opacity: 0.9;
+      }
+
+      .topbar-inner {
+        max-width: var(--content);
+        margin: 0 auto;
+        padding: 12px 18px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 180px;
+      }
+
+      .brand-title {
+        font-family: var(--font-display);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.6px;
+      }
+
+      .brand-sub {
+        font-size: 12px;
+        color: var(--ink-2);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .pill {
+        padding: 9px 12px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.42);
+        border-radius: 999px;
+        font-size: 12px;
+        color: var(--ink-2);
+        transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+      }
+
+      .pill:hover {
+        background: rgba(255, 255, 255, 0.7);
+        border-color: var(--stroke-2);
+        transform: translateY(-1px);
+      }
+
+      .pill:active {
+        transform: translateY(0);
+      }
+
+      button.pill {
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      .hero {
+        margin-top: 16px;
+        padding: 26px 22px 22px;
+        border-radius: var(--radius);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.38));
+        border: 1px solid var(--stroke);
+        box-shadow: var(--shadow), inset 0 0 0 1px rgba(20, 17, 15, 0.08), inset 0 0 0 10px rgba(20, 17, 15, 0.03);
+        outline: 1px dashed rgba(20, 17, 15, 0.22);
+        outline-offset: -12px;
+        overflow: hidden;
+        position: relative;
+        transform-origin: 20% 0%;
+        animation: rise 780ms ease both;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: calc(var(--radius) + 2px);
+        background: radial-gradient(320px 220px at 18% 18%, rgba(180, 35, 24, 0.18), transparent 64%),
+          radial-gradient(380px 240px at 72% 20%, rgba(15, 118, 110, 0.12), transparent 62%),
+          radial-gradient(460px 300px at 50% 120%, rgba(138, 106, 0, 0.1), transparent 62%);
+        opacity: 0.9;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+      }
+
+      .hero::after {
+        content: "ADMIT / BEIJING";
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 2.4px;
+        color: rgba(20, 17, 15, 0.62);
+        transform: rotate(-2.2deg);
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px dashed rgba(20, 17, 15, 0.24);
+        background: rgba(251, 246, 234, 0.8);
+      }
+
+      .hero-stamp {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 126px;
+        height: 126px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        color: rgba(251, 246, 234, 0.92);
+        background: radial-gradient(50% 50% at 50% 45%, rgba(217, 45, 32, 0.94), rgba(180, 35, 24, 0.92));
+        border: 2px solid rgba(180, 35, 24, 0.78);
+        box-shadow: 0 18px 46px rgba(180, 35, 24, 0.18);
+        transform: rotate(-10deg);
+        mix-blend-mode: multiply;
+        opacity: 0.92;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .hero-stamp span:nth-child(1) {
+        font-family: var(--font-display);
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+
+      .hero-stamp span:nth-child(2) {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 3px;
+        opacity: 0.92;
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(30px, 4.2vw, 46px);
+        line-height: 1.06;
+        letter-spacing: 0.8px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero p {
+        margin: 12px 0 0;
+        color: var(--ink-2);
+        max-width: 74ch;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-meta {
+        margin-top: 14px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-meta-item {
+        grid-column: span 4;
+        border-radius: 14px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(251, 246, 234, 0.72);
+        padding: 10px 12px;
+        box-shadow: 0 10px 22px rgba(20, 17, 15, 0.08);
+        outline: 1px dashed rgba(20, 17, 15, 0.22);
+        outline-offset: -8px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .hero-meta-item .k {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 2.8px;
+        color: rgba(20, 17, 15, 0.6);
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .hero-meta-item .v {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 1.4px;
+        color: rgba(20, 17, 15, 0.86);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .meta-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 12px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .card {
+        position: relative;
+        border-radius: var(--radius);
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.6);
+        padding: 14px 14px 16px;
+        box-shadow: var(--shadow-soft);
+        transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+        animation: rise 860ms ease both;
+        outline: 1px dashed rgba(20, 17, 15, 0.2);
+        outline-offset: -10px;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 42px;
+        height: 1px;
+        background: repeating-linear-gradient(
+          90deg,
+          rgba(20, 17, 15, 0.32) 0,
+          rgba(20, 17, 15, 0.32) 6px,
+          transparent 6px,
+          transparent 12px
+        );
+        opacity: 0.22;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: -7px;
+        height: 14px;
+        background: radial-gradient(circle at 7px 7px, transparent 7px, rgba(20, 17, 15, 0.18) 7.2px, transparent 7.4px)
+          repeat-x;
+        background-size: 22px 14px;
+        opacity: 0.85;
+        pointer-events: none;
+      }
+
+      .meta-grid > .card:nth-child(1) {
+        animation-delay: 80ms;
+      }
+
+      .meta-grid > .card:nth-child(2) {
+        animation-delay: 150ms;
+      }
+
+      .meta-grid > .card:nth-child(3) {
+        animation-delay: 220ms;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        border-color: var(--stroke-2);
+        box-shadow: 0 18px 44px rgba(20, 17, 15, 0.16);
+      }
+
+      .card h2 {
+        margin: 0;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: rgba(20, 17, 15, 0.72);
+        letter-spacing: 2.1px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+
+      .card .value {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .card .desc {
+        margin-top: 8px;
+        font-size: 13px;
+        color: var(--ink-2);
+      }
+
+      .span-5 {
+        grid-column: span 5;
+      }
+
+      .span-4 {
+        grid-column: span 4;
+      }
+
+      .span-3 {
+        grid-column: span 3;
+      }
+
+      .span-12 {
+        grid-column: span 12;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 12px;
+      }
+
+      .chips {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.5);
+        font-size: 12px;
+        color: var(--ink-2);
+      }
+
+      .chip b {
+        font-weight: 700;
+        color: rgba(20, 17, 15, 0.92);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 28px;
+        padding: 5px 8px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 700;
+        border: 1px solid rgba(20, 17, 15, 0.18);
+        font-family: var(--font-mono);
+        letter-spacing: 0.6px;
+      }
+
+      .b-ok {
+        color: rgba(20, 17, 15, 0.9);
+        background: rgba(15, 118, 110, 0.12);
+        border-color: rgba(15, 118, 110, 0.28);
+      }
+
+      .b-warn {
+        color: rgba(20, 17, 15, 0.9);
+        background: rgba(138, 106, 0, 0.14);
+        border-color: rgba(138, 106, 0, 0.28);
+      }
+
+      .b-danger {
+        color: rgba(20, 17, 15, 0.92);
+        background: rgba(180, 35, 24, 0.14);
+        border-color: rgba(180, 35, 24, 0.32);
+      }
+
+      .section {
+        margin-top: 18px;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 22px 0 12px;
+        position: relative;
+        padding-top: 14px;
+      }
+
+      .section-header::before {
+        content: attr(data-label);
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 3.2px;
+        color: rgba(20, 17, 15, 0.66);
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 20px;
+        letter-spacing: 0.4px;
+      }
+
+      .section-header p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 13px;
+      }
+
+      .divider {
+        height: 1px;
+        width: 100%;
+        background: linear-gradient(to right, transparent, rgba(20, 17, 15, 0.18), transparent);
+        margin: 12px 0 0;
+      }
+
+      .phase {
+        border-radius: var(--radius);
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: var(--shadow-soft);
+        overflow: hidden;
+        animation: rise 860ms ease both;
+        position: relative;
+      }
+
+      .phase::before {
+        content: attr(data-phase);
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        font-family: var(--font-display);
+        font-size: 54px;
+        letter-spacing: 2px;
+        color: rgba(20, 17, 15, 0.08);
+        transform: rotate(-6deg);
+        pointer-events: none;
+      }
+
+      .phase-head {
+        padding: 16px 16px 14px;
+        border-bottom: 1px solid var(--stroke);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: linear-gradient(135deg, rgba(180, 35, 24, 0.08), rgba(15, 118, 110, 0.06));
+      }
+
+      .phase-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .phase-title h3 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 17px;
+        letter-spacing: 0.3px;
+      }
+
+      .phase-title .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        color: rgba(20, 17, 15, 0.72);
+      }
+
+      .phase-desc {
+        color: var(--ink-2);
+        font-size: 13px;
+      }
+
+      .days {
+        padding: 14px 14px 14px 44px;
+        display: grid;
+        gap: 14px;
+        position: relative;
+      }
+
+      .days::before {
+        content: "";
+        position: absolute;
+        top: 18px;
+        bottom: 18px;
+        left: 22px;
+        width: 1px;
+        background: linear-gradient(to bottom, rgba(20, 17, 15, 0.22), rgba(20, 17, 15, 0.06));
+      }
+
+      .day {
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.62);
+        overflow: hidden;
+        position: relative;
+        animation: rise 860ms ease both;
+      }
+
+      .day::before {
+        content: "";
+        position: absolute;
+        left: -34px;
+        top: 18px;
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+        background: var(--paper);
+        border: 2px solid rgba(180, 35, 24, 0.42);
+        box-shadow: 0 8px 18px rgba(180, 35, 24, 0.12);
+      }
+
+      .day::after {
+        content: attr(data-day);
+        position: absolute;
+        top: 8px;
+        right: 64px;
+        font-family: var(--font-display);
+        font-size: 64px;
+        letter-spacing: 2px;
+        color: rgba(20, 17, 15, 0.08);
+        transform: rotate(-4deg);
+        pointer-events: none;
+      }
+
+      .day-stub {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 52px;
+        border-left: 1px dashed rgba(20, 17, 15, 0.26);
+        background: linear-gradient(180deg, rgba(180, 35, 24, 0.12), rgba(15, 118, 110, 0.08));
+        display: grid;
+        place-items: center;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: rgba(20, 17, 15, 0.66);
+        text-transform: uppercase;
+        pointer-events: none;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
+
+      .day-stub::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        bottom: 14px;
+        left: -1px;
+        width: 1px;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(20, 17, 15, 0.52) 0,
+          rgba(20, 17, 15, 0.52) 4px,
+          transparent 4px,
+          transparent 11px
+        );
+        opacity: 0.35;
+      }
+
+      .day-stub::after {
+        content: "";
+        position: absolute;
+        top: -8px;
+        bottom: -8px;
+        left: -14px;
+        width: 28px;
+        background: radial-gradient(circle 10px at 50% 22px, var(--paper) 10px, transparent 11px);
+        background-size: 28px 46px;
+        background-repeat: repeat-y;
+        opacity: 0.96;
+      }
+
+      .day-title .badge {
+        min-width: 46px;
+        padding: 7px 10px;
+        letter-spacing: 2px;
+        border-width: 2px;
+      }
+
+      .days > .day:nth-child(1) {
+        animation-delay: 70ms;
+      }
+      .days > .day:nth-child(2) {
+        animation-delay: 120ms;
+      }
+      .days > .day:nth-child(3) {
+        animation-delay: 170ms;
+      }
+      .days > .day:nth-child(4) {
+        animation-delay: 220ms;
+      }
+
+      .day-head {
+        padding: 14px 66px 12px 14px;
+        border-bottom: 1px solid var(--stroke);
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .day-left {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        min-width: 0;
+      }
+
+      .day-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .day-title h4 {
+        margin: 0;
+        font-size: 15px;
+        letter-spacing: 0.15px;
+        font-weight: 700;
+      }
+
+      .day-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        color: var(--ink-2);
+        font-size: 12px;
+        padding-right: 52px;
+      }
+
+      .day-meta span {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(251, 246, 234, 0.84);
+        border: 1px solid var(--stroke);
+      }
+
+      .day-body {
+        padding: 12px 66px 14px 14px;
+        display: grid;
+        gap: 12px;
+      }
+
+      .slots {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .slot {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        gap: 10px;
+        align-items: start;
+        padding: 10px 10px;
+        border-radius: 12px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.46);
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      }
+
+      .slot:hover {
+        transform: translateY(-1px);
+        border-color: var(--stroke-2);
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .time {
+        font-size: 12px;
+        color: rgba(20, 17, 15, 0.78);
+        padding: 6px 8px;
+        border-radius: 12px;
+        border: 1px solid rgba(180, 35, 24, 0.26);
+        background: rgba(251, 246, 234, 0.9);
+        text-align: center;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        letter-spacing: 0.4px;
+      }
+
+      .what {
+        min-width: 0;
+      }
+
+      .what b {
+        display: block;
+        font-weight: 650;
+        margin-bottom: 4px;
+      }
+
+      .what p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 13px;
+      }
+
+      .note-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      details {
+        position: relative;
+        border-radius: var(--radius);
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.58);
+        overflow: hidden;
+        animation: rise 860ms ease both;
+        outline: 1px dashed rgba(20, 17, 15, 0.2);
+        outline-offset: -12px;
+      }
+
+      summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      details > summary {
+        border-bottom: 1px dashed rgba(20, 17, 15, 0.22);
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .detail-body {
+        padding: 0 16px 14px;
+        color: var(--ink-2);
+      }
+
+      .detail-body ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .detail-body li {
+        color: rgba(20, 17, 15, 0.78);
+      }
+
+      .kpi {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .kpi-item {
+        border-radius: 14px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.54);
+        padding: 12px 12px 13px;
+      }
+
+      .kpi-item .label {
+        color: var(--ink-2);
+        font-size: 12px;
+      }
+
+      .kpi-item .num {
+        margin-top: 6px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        font-family: var(--font-display);
+      }
+
+      .footer {
+        margin-top: 18px;
+        padding: 14px 12px;
+        text-align: center;
+        color: var(--ink-3);
+        font-size: 12px;
+      }
+
+      .fab {
+        position: fixed;
+        right: 14px;
+        bottom: 14px;
+        z-index: 20;
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        border: 1px solid var(--stroke);
+        background: rgba(255, 255, 255, 0.75);
+        box-shadow: 0 14px 34px rgba(20, 17, 15, 0.18);
+        color: rgba(20, 17, 15, 0.86);
+        font-family: var(--font-mono);
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        transition: transform 160ms ease, background 160ms ease;
+      }
+
+      .fab:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 920px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .span-5,
+        .span-4,
+        .span-3 {
+          grid-column: span 12;
+        }
+        .note-grid {
+          grid-template-columns: 1fr;
+        }
+        .kpi {
+          grid-template-columns: 1fr;
+        }
+        .hero-stamp {
+          width: 96px;
+          height: 96px;
+          left: 14px;
+          top: 14px;
+        }
+        .hero::after {
+          display: none;
+        }
+        .hero-meta-item {
+          grid-column: span 12;
+        }
+        .day::after {
+          display: none;
+        }
+        .day-stub {
+          width: 44px;
+          font-size: 11px;
+          letter-spacing: 3px;
+        }
+        .day-head {
+          padding-right: 56px;
+        }
+        .day-body {
+          padding-right: 56px;
+        }
+        .day-meta {
+          padding-right: 44px;
+        }
+      }
+
+      @media print {
+        :root {
+          --paper: #ffffff;
+          --paper-2: #ffffff;
+          --ink: #111827;
+          --ink-2: #374151;
+          --ink-3: #6b7280;
+          --stroke: #e5e7eb;
+          --stroke-2: #d1d5db;
+        }
+        body {
+          background: #ffffff;
+        }
+        body::before,
+        body::after {
+          display: none !important;
+        }
+        .topbar::after,
+        .hero::before,
+        .hero::after,
+        .hero-meta,
+        .card::before,
+        .card::after,
+        .phase::before,
+        .days::before,
+        .day::before,
+        .day::after,
+        .section-header::before,
+        .day-stub {
+          content: none !important;
+          display: none !important;
+        }
+        .hero-stamp {
+          display: none !important;
+        }
+        .topbar {
+          display: none;
+        }
+        .hero,
+        .card,
+        .phase,
+        .day,
+        details,
+        .slot {
+          box-shadow: none !important;
+        }
+        .hero,
+        .card,
+        .phase,
+        .day,
+        details {
+          border-color: #e5e7eb !important;
+        }
+        .slot {
+          border-color: #e5e7eb !important;
+        }
+        a {
+          text-decoration: none;
+        }
+        .fab {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .legacy {
+        display: none;
+      }
+
+      .m-app {
+        position: relative;
+        z-index: 2;
+        max-width: 480px;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding-bottom: calc(86px + env(safe-area-inset-bottom));
+      }
+
+      .m-appbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        padding: 14px 14px 12px;
+        background: rgba(251, 246, 234, 0.92);
+        border-bottom: 1px solid rgba(20, 17, 15, 0.14);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .m-appbar-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .m-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        letter-spacing: 0.6px;
+      }
+
+      .m-sub {
+        margin-top: 4px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 2.6px;
+        text-transform: uppercase;
+        color: rgba(20, 17, 15, 0.62);
+      }
+
+      .m-iconbtn {
+        height: 40px;
+        min-width: 40px;
+        padding: 0 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: 0 12px 26px rgba(20, 17, 15, 0.12);
+        color: rgba(20, 17, 15, 0.82);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .m-screen {
+        display: none;
+        padding: 14px 14px 0;
+      }
+
+      .m-screen[data-active="true"] {
+        display: block;
+      }
+
+      .m-panel {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.62);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        overflow: hidden;
+      }
+
+      .m-hero {
+        padding: 16px 14px 14px;
+        position: relative;
+      }
+
+      .m-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(240px 180px at 18% 16%, rgba(180, 35, 24, 0.18), transparent 66%),
+          radial-gradient(260px 180px at 84% 18%, rgba(15, 118, 110, 0.12), transparent 66%);
+        mix-blend-mode: multiply;
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .m-stamp {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        width: 78px;
+        height: 78px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(50% 50% at 50% 45%, rgba(217, 45, 32, 0.94), rgba(180, 35, 24, 0.92));
+        border: 2px solid rgba(180, 35, 24, 0.78);
+        box-shadow: 0 18px 38px rgba(180, 35, 24, 0.18);
+        color: rgba(251, 246, 234, 0.94);
+        transform: rotate(-10deg);
+        mix-blend-mode: multiply;
+        pointer-events: none;
+      }
+
+      .m-stamp span:nth-child(1) {
+        font-family: var(--font-display);
+        letter-spacing: 3px;
+        font-size: 14px;
+      }
+
+      .m-stamp span:nth-child(2) {
+        font-family: var(--font-mono);
+        letter-spacing: 2.6px;
+        font-size: 10px;
+        opacity: 0.92;
+      }
+
+      .m-hero h1 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 26px;
+        letter-spacing: 0.6px;
+        line-height: 1.08;
+        position: relative;
+        z-index: 1;
+        padding-right: 84px;
+      }
+
+      .m-hero p {
+        margin: 10px 0 0;
+        color: var(--ink-2);
+        font-size: 13px;
+        position: relative;
+        z-index: 1;
+        max-width: 34ch;
+      }
+
+      .m-kv {
+        margin-top: 12px;
+        display: grid;
+        gap: 10px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .m-kv-item {
+        border-radius: 14px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(251, 246, 234, 0.8);
+        padding: 10px 12px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .m-k {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 1.6px;
+        text-transform: none;
+        color: rgba(20, 17, 15, 0.62);
+        white-space: nowrap;
+      }
+
+      .m-v {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 1.3px;
+        color: rgba(20, 17, 15, 0.86);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .m-section {
+        margin-top: 12px;
+      }
+
+      .m-section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 0 10px;
+      }
+
+      .m-section-title h2 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 18px;
+        letter-spacing: 0.4px;
+      }
+
+      .m-section-title span {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 1.6px;
+        text-transform: none;
+        color: rgba(20, 17, 15, 0.6);
+      }
+
+      .m-daylist {
+        display: grid;
+        gap: 10px;
+      }
+
+      .m-daycard {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 10px;
+        align-items: start;
+        padding: 12px 12px;
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+      }
+
+      .m-daycard:active {
+        transform: translateY(1px);
+        box-shadow: 0 10px 24px rgba(20, 17, 15, 0.1);
+        background: rgba(255, 255, 255, 0.76);
+      }
+
+      .m-dayno {
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        border: 2px solid rgba(180, 35, 24, 0.32);
+        background: rgba(251, 246, 234, 0.86);
+        font-family: var(--font-mono);
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: rgba(20, 17, 15, 0.86);
+      }
+
+      .m-daymain {
+        min-width: 0;
+      }
+
+      .m-daytitle {
+        font-weight: 800;
+        letter-spacing: 0.1px;
+        line-height: 1.25;
+      }
+
+      .m-daymeta {
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .m-daycard .m-tag {
+        padding: 5px 8px;
+        font-size: 11px;
+        border-radius: 999px;
+      }
+
+      .m-tag {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(20, 17, 15, 0.14);
+        background: rgba(251, 246, 234, 0.86);
+        color: rgba(20, 17, 15, 0.74);
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .m-tag[data-tone="danger"] {
+        border-color: rgba(180, 35, 24, 0.28);
+        background: rgba(180, 35, 24, 0.08);
+        color: rgba(120, 20, 16, 0.92);
+      }
+
+      .m-tag[data-tone="warn"] {
+        border-color: rgba(138, 106, 0, 0.28);
+        background: rgba(138, 106, 0, 0.08);
+        color: rgba(90, 70, 0, 0.9);
+      }
+
+      .m-bottomnav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 40;
+        display: grid;
+        place-items: center;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(251, 246, 234, 0.92);
+        border-top: 1px solid rgba(20, 17, 15, 0.14);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: transform 180ms ease, opacity 180ms ease;
+      }
+
+      .m-app[data-m-screen="day"] .m-bottomnav {
+        transform: translateY(110%);
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .m-tabs {
+        width: min(480px, 100%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .m-tab {
+        height: 46px;
+        border-radius: 999px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.72);
+        display: grid;
+        place-items: center;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        text-transform: none;
+        color: rgba(20, 17, 15, 0.78);
+        cursor: pointer;
+      }
+
+      .m-tab[data-on="true"] {
+        border-width: 2px;
+        border-color: rgba(180, 35, 24, 0.42);
+        color: rgba(20, 17, 15, 0.9);
+      }
+
+      .m-dayview-head {
+        display: grid;
+        gap: 10px;
+      }
+
+      .m-backrow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .m-hgroup {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        padding: 14px 14px;
+      }
+
+      .m-hgroup .m-dayline {
+        font-family: var(--font-mono);
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        color: rgba(20, 17, 15, 0.66);
+        font-size: 11px;
+      }
+
+      .m-hgroup h2 {
+        margin: 8px 0 0;
+        font-family: var(--font-display);
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        line-height: 1.12;
+      }
+
+      .m-slots {
+        margin: 10px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .m-slot {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        overflow: hidden;
+      }
+
+      .m-slot-inner {
+        padding: 12px 12px;
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        gap: 10px;
+        align-items: start;
+      }
+
+      .m-time {
+        border-radius: 14px;
+        border: 2px solid rgba(180, 35, 24, 0.26);
+        background: rgba(251, 246, 234, 0.88);
+        padding: 8px 8px;
+        text-align: center;
+        font-family: var(--font-mono);
+        letter-spacing: 1px;
+        color: rgba(20, 17, 15, 0.86);
+        font-size: 12px;
+        line-height: 1.15;
+      }
+
+      .m-what b {
+        display: block;
+        font-weight: 900;
+        letter-spacing: 0.1px;
+        line-height: 1.25;
+      }
+
+      .m-what p {
+        margin: 6px 0 0;
+        color: rgba(20, 17, 15, 0.74);
+        font-size: 13px;
+      }
+
+      .m-tips details {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        overflow: hidden;
+      }
+
+      .m-tips summary {
+        padding: 14px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        cursor: pointer;
+        font-weight: 900;
+      }
+
+      .m-tips .m-tipbody {
+        padding: 0 14px 14px;
+        color: rgba(20, 17, 15, 0.74);
+        font-size: 13px;
+      }
+
+      .m-tips ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+        display: grid;
+        gap: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m-app" data-m-screen="overview" aria-label="手机端行程应用">
+      <header class="m-appbar" aria-label="顶栏">
+        <div class="m-appbar-top">
+          <div>
+            <div class="m-title">北京八日深度游</div>
+            <div class="m-sub">2026.01.28 → 02.04 · mobile only</div>
+          </div>
+          <button class="m-iconbtn" type="button" data-m-action="print">print</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="m-screen" id="m-overview" data-active="true" aria-label="总览">
+          <div class="m-panel">
+            <div class="m-hero">
+              <div class="m-stamp" aria-hidden="true"><span>已核验</span><span>VALID</span></div>
+              <h1>北京八日深度游终极日程</h1>
+              <p>先抓三件事：住宿、预约、主题。点 Day 卡片看当日时间段。</p>
+              <div class="m-kv" aria-label="关键信息">
+                <div class="m-kv-item"><span class="m-k">编号</span><span class="m-v" data-m-serial>—</span></div>
+                <div class="m-kv-item"><span class="m-k">住宿</span><span class="m-v">前门 3 晚 → 西直门 4 晚</span></div>
+                <div class="m-kv-item"><span class="m-k">必去</span><span class="m-v">故宫 / 国博 / 恭王府 / 雍和宫</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-section" aria-label="每日列表">
+            <div class="m-section-title">
+              <h2>每日安排</h2>
+              <span>点开查看</span>
+            </div>
+            <div class="m-daylist" data-m-daylist></div>
+          </div>
+        </section>
+
+        <section class="m-screen" id="m-day" aria-label="每日详情">
+          <div class="m-dayview-head">
+            <div class="m-backrow">
+              <button class="m-iconbtn" type="button" data-m-action="back">back</button>
+              <button class="m-iconbtn" type="button" data-m-action="top">top</button>
+            </div>
+            <div class="m-hgroup">
+              <div class="m-dayline" data-m-dayline>DAY —</div>
+              <h2 data-m-daytitle>—</h2>
+              <div class="m-daymeta" data-m-daytags></div>
+            </div>
+          </div>
+          <ul class="m-slots" data-m-slots></ul>
+        </section>
+
+        <section class="m-screen" id="m-tips" aria-label="关键提醒">
+          <div class="m-section-title">
+            <h2>关键提醒</h2>
+            <span>appendix</span>
+          </div>
+          <div class="m-tips" data-m-tips></div>
+        </section>
+      </main>
+
+      <nav class="m-bottomnav" aria-label="底部导航">
+        <div class="m-tabs">
+          <button class="m-tab" type="button" data-m-nav="overview" data-on="true">总览</button>
+          <button class="m-tab" type="button" data-m-nav="tips" data-on="false">提醒</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="legacy">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-title">北京八日深度游</div>
+          <div class="brand-sub">2026.01.28 - 02.04 · 纯静态行程单</div>
+        </div>
+        <nav class="nav" aria-label="页面导航">
+          <a class="pill" href="#overview">总览</a>
+          <a class="pill" href="#phase-1">皇城核心区</a>
+          <a class="pill" href="#phase-2">园林与长城</a>
+          <a class="pill" href="#tips">提醒</a>
+          <button class="pill" type="button" data-action="print">打印</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero" id="overview" aria-label="行程总览">
+        <div class="hero-stamp" aria-hidden="true"><span>已核验</span><span>VALID</span></div>
+        <h1>北京八日深度游终极日程</h1>
+        <p>
+          你这份行程整体节奏非常成熟：核心大馆（故宫/国博）+ 轴线/园林 + 长城 + 北城人文夜景，且换宿节点合理。
+          下面把它整理成一张“随时可打开/可打印”的单页，并把容易踩坑的预约与时间缓冲做了补强。
+        </p>
+
+        <div class="hero-meta" aria-label="票据要点">
+          <div class="hero-meta-item">
+            <span class="k">serial</span>
+            <span class="v" data-serial>—</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">valid</span>
+            <span class="v">2026.01.28 → 02.04</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">base</span>
+            <span class="v">前门 / 西直门</span>
+          </div>
+        </div>
+
+        <div class="meta-grid">
+          <div class="card span-5">
+            <h2>日期</h2>
+            <div class="value">2026.01.28（周三）— 02.04（周三）</div>
+            <div class="desc">8 天 7 晚，含抵达与返程日。</div>
+            <div class="chips" aria-label="核心标签">
+              <span class="chip"><span class="badge b-ok">主</span><b>中轴线</b>故宫/天安门/景山</span>
+              <span class="chip"><span class="badge b-ok">馆</span><b>国博</b>古代中国</span>
+              <span class="chip"><span class="badge b-ok">园</span><b>颐和园</b>全天</span>
+              <span class="chip"><span class="badge b-ok">峰</span><b>长城</b>八达岭</span>
+              <span class="chip"><span class="badge b-ok">夜</span><b>奥运</b>鸟巢水立方</span>
+            </div>
+          </div>
+
+          <div class="card span-4">
+            <h2>住宿策略</h2>
+            <div class="value">前门 3 晚 → 西直门 4 晚</div>
+            <div class="desc">皇城核心区步行友好；后半程贴近北站/地铁枢纽。</div>
+            <div class="kpi" aria-label="住宿统计">
+              <div class="kpi-item">
+                <div class="label">前门</div>
+                <div class="num">1.28–1.31</div>
+              </div>
+              <div class="kpi-item">
+                <div class="label">西直门</div>
+                <div class="num">1.31–2.4</div>
+              </div>
+              <div class="kpi-item">
+                <div class="label">换宿</div>
+                <div class="num">周六晚</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card span-3">
+            <h2>强制预约</h2>
+            <div class="value">尽早锁票</div>
+            <div class="desc">故宫/国博/恭王府/雍和宫等需实名预约；天安门区域也常有预约要求。</div>
+            <div class="chips" aria-label="风险提示">
+              <span class="chip"><span class="badge b-danger">!</span><b>故宫</b>放票紧</span>
+              <span class="chip"><span class="badge b-warn">!</span><b>国博</b>热门档</span>
+              <span class="chip"><span class="badge b-warn">!</span><b>天安门</b>进场</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="阶段一">
+        <div class="section-header" id="phase-1" data-label="PHASE I">
+          <h2>第一阶段：皇城核心区（住前门）</h2>
+          <p>步行 + 地铁为主，体力消耗集中在故宫与天坛。</p>
+        </div>
+        <div class="divider" role="presentation"></div>
+
+        <div class="phase" data-phase="I">
+          <div class="phase-head">
+            <div class="phase-title">
+              <h3>Day 1–4 · 皇城核心区</h3>
+              <div class="tag">住宿：前门 · 1.28–1.31</div>
+            </div>
+            <div class="phase-desc">把最难“约”和最值“早到”的行程放前半段，是正确策略。</div>
+          </div>
+
+          <div class="days">
+            <article class="day" aria-label="Day 1">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D1</span>
+                    <h4>01.28（周三）抵达日</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>大兴机场 → 前门</span>
+                    <span>主题：落地/熟悉街区</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">下午</div>
+                    <div class="what">
+                      <b>大兴机场 → 前门酒店</b>
+                      <p>地铁约 70 分钟；建议预留 30 分钟冗余（换乘/安检/出站找路）。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">18:00-21:00</div>
+                    <div class="what">
+                      <b>前门大街 · 大栅栏夜步行</b>
+                      <p>先用“慢节奏”把时差/寒冷适应掉：吃一顿热的、早回酒店。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 2">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D2</span>
+                    <h4>01.29（周四）故宫精华日</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>建议早到：队伍/安检</span>
+                    <span>推荐：景山收尾俯瞰</span>
+                    <span>预约：故宫</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">08:30</div>
+                    <div class="what">
+                      <b>早餐后出发 → 午门</b>
+                      <p>证件/预约码/安检都要时间；建议 08:20 前到午门附近。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">09:00-15:00</div>
+                    <div class="what">
+                      <b>故宫博物院深度游</b>
+                      <p>路线：中轴线三大殿 → 西六宫 → 御花园。中午可在院内简餐补能量。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">15:30-17:00</div>
+                    <div class="what">
+                      <b>神武门出 → 景山公园</b>
+                      <p>登顶俯瞰故宫全景与中轴线；太阳下山早，尽量不要拖到太晚。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">晚上</div>
+                    <div class="what">
+                      <b>返回前门休整</b>
+                      <p>这天步数高，晚餐尽量“快 + 热 + 近”，为 D3 大馆留体力。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 3">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D3</span>
+                    <h4>01.30（周五）国家博物馆日</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>预约：国博</span>
+                    <span>核心：古代中国</span>
+                    <span>备选：王府井晚餐</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">09:30-13:30</div>
+                    <div class="what">
+                      <b>国家博物馆深度参观</b>
+                      <p>至少 4 小时很合理；建议带水与小零食，展厅走动强度并不低。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">14:00-15:30</div>
+                    <div class="what">
+                      <b>天安门广场与周边外观</b>
+                      <p>人民大会堂、国家大剧院外观。若预约成功且开放，可上午顺路参观毛主席纪念堂。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">晚上</div>
+                    <div class="what">
+                      <b>王府井步行街（可选）</b>
+                      <p>如果当天已经“馆疲劳”，王府井可以降级为：吃饭 + 买补给 + 早回。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 4">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-warn">D4</span>
+                    <h4>01.31（周六）天坛与什刹海文化日（含换宿）</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>预约：恭王府</span>
+                    <span>购票：天坛联票</span>
+                    <span>21:00前换宿</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">09:00-12:00</div>
+                    <div class="what">
+                      <b>天坛公园（东门入）</b>
+                      <p>联票：祈年殿、回音壁、圜丘。早上光线好、人相对少。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">13:00-16:00</div>
+                    <div class="what">
+                      <b>什刹海 · 恭王府</b>
+                      <p>“一座恭王府，半部清朝史”；建议按预约时间点严格到场。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">16:00-18:30</div>
+                    <div class="what">
+                      <b>什刹海慢逛</b>
+                      <p>烟袋斜街、鼓楼一带；冬天体感冷，找个热饮点做中途补给。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">19:00</div>
+                    <div class="what">
+                      <b>晚餐（什刹海附近）</b>
+                      <p>尽量别排太久队；你还要回前门取行李。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">21:00前</div>
+                    <div class="what">
+                      <b>前门取行李 → 西直门入住</b>
+                      <p>2 号线前门→西直门直达约 20 分钟；建议预留电梯/拖行李的时间。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-label="阶段二">
+        <div class="section-header" id="phase-2" data-label="PHASE II">
+          <h2>第二阶段：北城园林与长城（住西直门）</h2>
+          <p>地铁枢纽 + 近北站，适合长线日与奥运夜景。</p>
+        </div>
+        <div class="divider" role="presentation"></div>
+
+        <div class="phase" data-phase="II">
+          <div class="phase-head">
+            <div class="phase-title">
+              <h3>Day 5–8 · 园林/长城/北城人文</h3>
+              <div class="tag">住宿：西直门 · 01.31–02.04</div>
+            </div>
+            <div class="phase-desc">后半段强度更“分散”：颐和园与长城是两天峰值，其他日用人文与夜景做回弹。</div>
+          </div>
+
+          <div class="days">
+            <article class="day" aria-label="Day 5">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D5</span>
+                    <h4>02.01（周日）皇家园林日：颐和园</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>地铁：4 号线</span>
+                    <span>建议：北宫门入，东宫门出</span>
+                    <span>强度：全天</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">09:00</div>
+                    <div class="what">
+                      <b>早餐后出发 → 北宫门</b>
+                      <p>冬季风大，保暖优先；建议带保温杯。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">09:30-16:00</div>
+                    <div class="what">
+                      <b>颐和园全天游览</b>
+                      <p>路线：北宫门 → 苏州街 → 佛香阁 → 长廊 → 石舫 → 南湖岛 → 十七孔桥 → 东宫门。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">晚上</div>
+                    <div class="what">
+                      <b>西直门附近晚餐</b>
+                      <p>凯德 Mall 或周边“就近热量补给”，这天别再加夜景。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 6">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D6</span>
+                    <h4>02.02（周一）长城日：八达岭（避开闭馆）</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>北京北站：步行可达</span>
+                    <span>交通：京张高铁</span>
+                    <span>强度：爬升</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">07:30</div>
+                    <div class="what">
+                      <b>步行至北京北站</b>
+                      <p>带好证件；高铁进站也要过安检，建议至少提前 30 分钟到站。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">08:30</div>
+                    <div class="what">
+                      <b>高铁出发 → 八达岭长城</b>
+                      <p>确认到站为“八达岭长城站”；返程票也建议提前买好。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">09:00-14:00</div>
+                    <div class="what">
+                      <b>八达岭长城游览</b>
+                      <p>建议：先南段好汉碑 → 再北段至高点；注意防滑与补水。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">15:00左右</div>
+                    <div class="what">
+                      <b>高铁返程 → 北京北站</b>
+                      <p>回到市区后尽量“轻活动”，把体力还给 D7。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 7">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-ok">D7</span>
+                    <h4>02.03（周二）雍和宫与奥运夜景</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>预约：雍和宫</span>
+                    <span>人文：国子监街</span>
+                    <span>夜景：奥林匹克公园</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">09:00-12:00</div>
+                    <div class="what">
+                      <b>雍和宫 → 国子监街</b>
+                      <p>若想更完整，可把孔庙/国子监作为“按体力决定”的可选项。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">13:00-15:00</div>
+                    <div class="what">
+                      <b>地坛公园</b>
+                      <p>适合放松走走，节奏别太赶，晚上还有夜景。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">16:00-17:30</div>
+                    <div class="what">
+                      <b>五道营胡同</b>
+                      <p>咖啡/热饮补给；这段安排非常聪明，是“体力缓冲垫”。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">19:00-21:00</div>
+                    <div class="what">
+                      <b>奥林匹克公园夜景</b>
+                      <p>鸟巢、水立方外观灯光最美；风大更冷，手套帽子必带。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="day" aria-label="Day 8">
+              <div class="day-head">
+                <div class="day-left">
+                  <div class="day-title">
+                    <span class="badge b-warn">D8</span>
+                    <h4>02.04（周三）文化收尾与返程</h4>
+                  </div>
+                  <div class="day-meta">
+                    <span>寄存行李</span>
+                    <span>国家图书馆</span>
+                    <span>北京西站 17:00 高铁</span>
+                  </div>
+                </div>
+              </div>
+              <div class="day-body">
+                <ul class="slots">
+                  <li class="slot">
+                    <div class="time">09:00-11:30</div>
+                    <div class="what">
+                      <b>退房寄存 → 国家图书馆（北区）</b>
+                      <p>先查开放展览与入馆要求（常需身份证/安检）；《四库全书》等展可作为收尾仪式感。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">12:00-13:30</div>
+                    <div class="what">
+                      <b>西直门午餐</b>
+                      <p>建议“快吃 + 热食 + 方便打包”，避免拖到出发节点。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">14:00-15:00</div>
+                    <div class="what">
+                      <b>取行李 → 前往北京西站</b>
+                      <p>从西直门走 4 号线到国家图书馆换乘 9 号线较顺；按 35–45 分钟预估更稳。</p>
+                    </div>
+                  </li>
+                  <li class="slot">
+                    <div class="time">17:00</div>
+                    <div class="what">
+                      <b>高铁返程</b>
+                      <p>建议 15:00 前到站开始安检候车，冬天行李多时更容易慢。</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tips" aria-label="关键提醒">
+        <div class="section-header" data-label="APPENDIX">
+          <h2>关键提醒（按重要性排序）</h2>
+          <p>只加真正会影响成行的内容，避免信息噪音。</p>
+        </div>
+        <div class="divider" role="presentation"></div>
+
+        <div class="note-grid">
+          <details open>
+            <summary>
+              <span>预约与证件</span>
+              <span class="badge b-danger">必做</span>
+            </summary>
+            <div class="detail-body">
+              <ul>
+                <li>故宫/国博/恭王府/雍和宫：实名预约，按放票规则尽早锁定。</li>
+                <li>天安门广场及周边安检：以当天政策为准，尽量提前一天确认是否需要预约进场。</li>
+                <li>北京北站/高铁：身份证随身；去长城日建议双向车票都提前买好。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details open>
+            <summary>
+              <span>时间缓冲与体力策略</span>
+              <span class="badge b-warn">很关键</span>
+            </summary>
+            <div class="detail-body">
+              <ul>
+                <li>大馆日（故宫/国博）不要再叠加“远距离夜景”，你已经做对了。</li>
+                <li>换宿日（D4）最大的风险是晚餐排队 + 回酒店取行李拖延，优先保证 21:00 前入住西直门。</li>
+                <li>冬季日照短，室外景点（景山/长城/奥运公园）尽量把核心体验放在 15:30 前后。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>冬季北京：穿搭与补给</span>
+              <span class="badge b-ok">舒适</span>
+            </summary>
+            <div class="detail-body">
+              <ul>
+                <li>保暖优先级：帽子/手套/围巾 ≈ 羽绒外套 &gt; 保暖袜 &gt; 暖贴。</li>
+                <li>颐和园与长城风大：建议带保温杯或随时热饮点作为补给锚点。</li>
+                <li>鞋子：防滑比好看重要；你会走很多石板路与台阶。</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span>可选升级（不强加）</span>
+              <span class="badge b-ok">加分</span>
+            </summary>
+            <div class="detail-body">
+              <ul>
+                <li>D2 故宫：如果你对器物/书画特别感兴趣，可在当天现场按开放情况插入专题馆，主线不变。</li>
+                <li>D5 颐和园：若体力允许，可把“后山/西堤”作为加分支线；不行就果断砍掉。</li>
+                <li>D7 五道营：提前收藏 2–3 家店，避免临时选择焦虑，节奏更松弛。</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <div class="footer" aria-label="页脚">
+        生成于本地静态页面 · 可直接双击 index.html 打开或打印（建议 A4 纵向）
+      </div>
+    </main>
+    <a class="fab" href="#overview" aria-label="回到顶部">TOP</a>
+    <script>
+      (() => {
+        const hashToBase36 = (input) => {
+          let h = 2166136261;
+          for (let i = 0; i < input.length; i += 1) {
+            h ^= input.charCodeAt(i);
+            h = Math.imul(h, 16777619);
+          }
+          return (h >>> 0).toString(36).toUpperCase().padStart(7, "0");
+        };
+
+        const buttons = document.querySelectorAll("[data-action]");
+        for (const button of buttons) {
+          button.addEventListener("click", () => {
+            const action = button.getAttribute("data-action");
+            if (action === "print") {
+              window.print();
+            }
+          });
+        }
+
+        const serialEl = document.querySelector("[data-serial]");
+        if (serialEl) {
+          const title = document.title || "BEIJING";
+          serialEl.textContent = `BJ-${hashToBase36(title).slice(0, 7)}`;
+        }
+
+        const days = document.querySelectorAll(".day");
+        for (const day of days) {
+          const badge = day.querySelector(".day-title .badge");
+          const raw = (badge?.textContent ?? "").trim();
+          const n = Number.parseInt(raw.replace(/[^\d]/g, ""), 10);
+          if (Number.isFinite(n) && n > 0) {
+            day.dataset.day = String(n).padStart(2, "0");
+          }
+          const stub = document.createElement("div");
+          stub.className = "day-stub";
+          stub.textContent = "VALID";
+          stub.setAttribute("aria-hidden", "true");
+          day.appendChild(stub);
+        }
+      })();
+    </script>
+    </div>
+    <script>
+      (() => {
+        const hashToBase36 = (input) => {
+          let h = 2166136261;
+          for (let i = 0; i < input.length; i += 1) {
+            h ^= input.charCodeAt(i);
+            h = Math.imul(h, 16777619);
+          }
+          return (h >>> 0).toString(36).toUpperCase().padStart(7, "0");
+        };
+
+        const qs = (sel, root = document) => root.querySelector(sel);
+        const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+        const serialEl = qs("[data-m-serial]");
+        if (serialEl) {
+          const title = document.title || "BEIJING";
+          serialEl.textContent = `BJ-${hashToBase36(title).slice(0, 7)}`;
+        }
+
+        const screens = {
+          overview: qs("#m-overview"),
+          day: qs("#m-day"),
+          tips: qs("#m-tips"),
+        };
+
+        const dayListEl = qs("[data-m-daylist]");
+        const dayLineEl = qs("[data-m-dayline]");
+        const dayTitleEl = qs("[data-m-daytitle]");
+        const dayTagsEl = qs("[data-m-daytags]");
+        const daySlotsEl = qs("[data-m-slots]");
+        const tipsEl = qs("[data-m-tips]");
+
+        const legacyRoot = qs(".legacy");
+        const legacyDays = legacyRoot ? qsa(".day", legacyRoot) : [];
+        const legacyTips = legacyRoot ? qsa("#tips details", legacyRoot) : [];
+
+        const scoreTag = (t) => {
+          if (!t) return 0;
+          if (t.includes("预约")) return 100;
+          if (t.includes("购票")) return 90;
+          if (t.includes("换宿")) return 85;
+          if (t.includes("早到") || t.includes("建议早到")) return 80;
+          if (t.includes("主题")) return 70;
+          return 10;
+        };
+
+        const tagTone = (t) => {
+          if (!t) return "base";
+          if (t.includes("预约")) return "danger";
+          if (t.includes("购票") || t.includes("换宿") || t.includes("早到") || t.includes("建议早到")) return "warn";
+          return "base";
+        };
+
+        const pickTags = (meta, limit) => {
+          const items = (meta || []).map((t, i) => ({ t, i, s: scoreTag(t) })).filter((x) => x.t);
+          items.sort((a, b) => b.s - a.s || a.i - b.i);
+          const chosen = items.slice(0, limit);
+          chosen.sort((a, b) => a.i - b.i);
+          return chosen.map((x) => x.t);
+        };
+
+        const parseDay = (dayEl) => {
+          const badgeText = (qs(".day-title .badge", dayEl)?.textContent ?? "").trim();
+          const num = Number.parseInt(badgeText.replace(/[^\d]/g, ""), 10);
+          const h4 = (qs(".day-title h4", dayEl)?.textContent ?? "").trim();
+          const dateMatch = h4.match(/^(\d{2}\.\d{2}（[^）]+）)(.*)$/);
+          const date = dateMatch ? dateMatch[1].trim() : "";
+          const title = dateMatch ? dateMatch[2].trim() : h4;
+          const meta = qsa(".day-meta span", dayEl).map((s) => (s.textContent ?? "").trim()).filter(Boolean);
+          const slots = qsa(".slot", dayEl).map((slotEl) => {
+            const time = (qs(".time", slotEl)?.textContent ?? "").trim();
+            const head = (qs(".what b", slotEl)?.textContent ?? "").trim();
+            const desc = (qs(".what p", slotEl)?.textContent ?? "").trim();
+            return { time, head, desc };
+          });
+          return { num, date, title, meta, slots };
+        };
+
+        const days = legacyDays.map(parseDay).filter((d) => Number.isFinite(d.num) && d.num > 0);
+        days.sort((a, b) => a.num - b.num);
+
+        const renderDayCard = (d) => {
+          const a = document.createElement("a");
+          a.className = "m-daycard";
+          a.href = `#day-${d.num}`;
+          a.setAttribute("aria-label", `打开 Day ${d.num} 详情`);
+
+          const left = document.createElement("div");
+          left.className = "m-dayno";
+          left.textContent = `D${String(d.num).padStart(2, "0")}`;
+
+          const main = document.createElement("div");
+          main.className = "m-daymain";
+
+          const t = document.createElement("div");
+          t.className = "m-daytitle";
+          t.textContent = `${d.date} ${d.title}`.trim();
+
+          const meta = document.createElement("div");
+          meta.className = "m-daymeta";
+          for (const tag of pickTags(d.meta, 2)) {
+            const s = document.createElement("span");
+            s.className = "m-tag";
+            s.textContent = tag;
+            const tone = tagTone(tag);
+            if (tone !== "base") s.dataset.tone = tone;
+            meta.appendChild(s);
+          }
+
+          main.appendChild(t);
+          main.appendChild(meta);
+          a.appendChild(left);
+          a.appendChild(main);
+          return a;
+        };
+
+        const renderTips = () => {
+          if (!tipsEl) return;
+          tipsEl.innerHTML = "";
+          for (const d of legacyTips) {
+            const title = (qs("summary span", d)?.textContent ?? "").trim();
+            const items = qsa(".detail-body li", d).map((li) => (li.textContent ?? "").trim()).filter(Boolean);
+
+            const wrapper = document.createElement("details");
+            if (d.hasAttribute("open")) wrapper.setAttribute("open", "");
+            const sum = document.createElement("summary");
+            const l = document.createElement("span");
+            l.textContent = title || "提醒";
+            const r = document.createElement("span");
+            r.className = "m-tag";
+            r.textContent = d.hasAttribute("open") ? "重点" : "展开";
+            sum.appendChild(l);
+            sum.appendChild(r);
+            const body = document.createElement("div");
+            body.className = "m-tipbody";
+            const ul = document.createElement("ul");
+            for (const it of items) {
+              const li = document.createElement("li");
+              li.textContent = it;
+              ul.appendChild(li);
+            }
+            body.appendChild(ul);
+            wrapper.appendChild(sum);
+            wrapper.appendChild(body);
+            tipsEl.appendChild(wrapper);
+          }
+        };
+
+        const renderOverview = () => {
+          if (!dayListEl) return;
+          dayListEl.innerHTML = "";
+          for (const d of days) {
+            dayListEl.appendChild(renderDayCard(d));
+          }
+        };
+
+        const setActive = (key) => {
+          const app = qs(".m-app");
+          if (app) app.dataset.mScreen = key;
+          for (const k of Object.keys(screens)) {
+            if (!screens[k]) continue;
+            screens[k].dataset.active = k === key ? "true" : "false";
+          }
+          for (const tab of qsa("[data-m-nav]")) {
+            tab.dataset.on = tab.getAttribute("data-m-nav") === key ? "true" : "false";
+          }
+          window.scrollTo({ top: 0, behavior: "auto" });
+        };
+
+        const renderDay = (num) => {
+          const d = days.find((x) => x.num === num);
+          if (!d) return;
+          if (dayLineEl) dayLineEl.textContent = `DAY ${String(d.num).padStart(2, "0")} · ${d.date}`.trim();
+          if (dayTitleEl) dayTitleEl.textContent = d.title || "当日安排";
+          if (dayTagsEl) {
+            dayTagsEl.innerHTML = "";
+            for (const tag of pickTags(d.meta, 4)) {
+              const s = document.createElement("span");
+              s.className = "m-tag";
+              s.textContent = tag;
+              const tone = tagTone(tag);
+              if (tone !== "base") s.dataset.tone = tone;
+              dayTagsEl.appendChild(s);
+            }
+          }
+          if (daySlotsEl) {
+            daySlotsEl.innerHTML = "";
+            for (const s of d.slots) {
+              const li = document.createElement("li");
+              li.className = "m-slot";
+              const inner = document.createElement("div");
+              inner.className = "m-slot-inner";
+              const t = document.createElement("div");
+              t.className = "m-time";
+              t.textContent = s.time || "—";
+              const w = document.createElement("div");
+              w.className = "m-what";
+              const b = document.createElement("b");
+              b.textContent = s.head || "—";
+              const p = document.createElement("p");
+              p.textContent = s.desc || "";
+              w.appendChild(b);
+              if (s.desc) w.appendChild(p);
+              inner.appendChild(t);
+              inner.appendChild(w);
+              li.appendChild(inner);
+              daySlotsEl.appendChild(li);
+            }
+          }
+        };
+
+        const route = () => {
+          const h = (location.hash || "").toLowerCase();
+          const dayMatch = h.match(/^#day-(\d+)$/);
+          if (dayMatch) {
+            const num = Number.parseInt(dayMatch[1], 10);
+            renderDay(num);
+            setActive("day");
+            return;
+          }
+          if (h === "#tips") {
+            setActive("tips");
+            return;
+          }
+          setActive("overview");
+        };
+
+        for (const tab of qsa("[data-m-nav]")) {
+          tab.addEventListener("click", () => {
+            const key = tab.getAttribute("data-m-nav");
+            if (key === "tips") {
+              location.hash = "#tips";
+              return;
+            }
+            location.hash = "#overview";
+          });
+        }
+
+        for (const btn of qsa("[data-m-action]")) {
+          btn.addEventListener("click", () => {
+            const act = btn.getAttribute("data-m-action");
+            if (act === "print") window.print();
+            if (act === "back") location.hash = "#overview";
+            if (act === "top") window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+
+        renderOverview();
+        renderTips();
+        window.addEventListener("hashchange", route);
+        if (!location.hash) location.hash = "#overview";
+        route();
+      })();
+    </script>
+  </body>
+</html>
