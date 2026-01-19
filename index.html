@@ -710,56 +710,6 @@
         pointer-events: none;
       }
 
-      .day-stub {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 52px;
-        border-left: 1px dashed rgba(20, 17, 15, 0.26);
-        background: linear-gradient(180deg, rgba(180, 35, 24, 0.12), rgba(15, 118, 110, 0.08));
-        display: grid;
-        place-items: center;
-        font-family: var(--font-mono);
-        font-size: 12px;
-        letter-spacing: 4px;
-        color: rgba(20, 17, 15, 0.66);
-        text-transform: uppercase;
-        pointer-events: none;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-      }
-
-      .day-stub::before {
-        content: "";
-        position: absolute;
-        top: 14px;
-        bottom: 14px;
-        left: -1px;
-        width: 1px;
-        background: repeating-linear-gradient(
-          to bottom,
-          rgba(20, 17, 15, 0.52) 0,
-          rgba(20, 17, 15, 0.52) 4px,
-          transparent 4px,
-          transparent 11px
-        );
-        opacity: 0.35;
-      }
-
-      .day-stub::after {
-        content: "";
-        position: absolute;
-        top: -8px;
-        bottom: -8px;
-        left: -14px;
-        width: 28px;
-        background: radial-gradient(circle 10px at 50% 22px, var(--paper) 10px, transparent 11px);
-        background-size: 28px 46px;
-        background-repeat: repeat-y;
-        opacity: 0.96;
-      }
-
       .day-title .badge {
         min-width: 46px;
         padding: 7px 10px;
@@ -1030,11 +980,6 @@
         .day::after {
           display: none;
         }
-        .day-stub {
-          width: 44px;
-          font-size: 11px;
-          letter-spacing: 3px;
-        }
         .day-head {
           padding-right: 56px;
         }
@@ -1073,8 +1018,7 @@
         .days::before,
         .day::before,
         .day::after,
-        .section-header::before,
-        .day-stub {
+        .section-header::before {
           content: none !important;
           display: none !important;
         }
@@ -1380,10 +1324,45 @@
         min-width: 0;
       }
 
+      .m-dayhead {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
       .m-daytitle {
         font-weight: 800;
         letter-spacing: 0.1px;
         line-height: 1.25;
+      }
+
+      .m-flag {
+        flex: 0 0 auto;
+        align-self: flex-start;
+        padding: 6px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(20, 17, 15, 0.14);
+        background: rgba(251, 246, 234, 0.92);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 1.2px;
+        color: rgba(20, 17, 15, 0.78);
+        white-space: nowrap;
+      }
+
+      .m-flag[data-tone="danger"] {
+        border-width: 2px;
+        border-color: rgba(180, 35, 24, 0.55);
+        background: rgba(180, 35, 24, 0.08);
+        color: rgba(120, 20, 16, 0.95);
+      }
+
+      .m-flag[data-tone="warn"] {
+        border-width: 2px;
+        border-color: rgba(138, 106, 0, 0.52);
+        background: rgba(138, 106, 0, 0.08);
+        color: rgba(90, 70, 0, 0.95);
       }
 
       .m-daymeta {
@@ -1476,6 +1455,41 @@
         gap: 10px;
       }
 
+      .m-alertbar {
+        border-radius: 18px;
+        border: 2px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.72);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        padding: 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .m-alertchip {
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 2px solid rgba(20, 17, 15, 0.14);
+        background: rgba(251, 246, 234, 0.9);
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0.2px;
+        color: rgba(20, 17, 15, 0.86);
+        white-space: nowrap;
+      }
+
+      .m-alertchip[data-tone="danger"] {
+        border-color: rgba(180, 35, 24, 0.6);
+        background: rgba(180, 35, 24, 0.1);
+        color: rgba(120, 20, 16, 0.96);
+      }
+
+      .m-alertchip[data-tone="warn"] {
+        border-color: rgba(138, 106, 0, 0.58);
+        background: rgba(138, 106, 0, 0.1);
+        color: rgba(90, 70, 0, 0.96);
+      }
+
       .m-backrow {
         display: flex;
         align-items: center;
@@ -1513,25 +1527,60 @@
         list-style: none;
         display: grid;
         gap: 10px;
+        position: relative;
+      }
+
+      .m-slots::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        bottom: 10px;
+        width: 2px;
+        border-radius: 999px;
+        background: rgba(20, 17, 15, 0.12);
       }
 
       .m-slot {
-        border-radius: 18px;
-        border: 1px solid rgba(20, 17, 15, 0.16);
-        background: rgba(255, 255, 255, 0.66);
-        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
-        overflow: hidden;
+        position: relative;
+        z-index: 1;
       }
 
       .m-slot-inner {
-        padding: 12px 12px;
         display: grid;
-        grid-template-columns: 86px 1fr;
+        grid-template-columns: 24px 78px 1fr;
         gap: 10px;
         align-items: start;
       }
 
+      .m-node {
+        width: 24px;
+        display: grid;
+        place-items: start center;
+        padding-top: 10px;
+      }
+
+      .m-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        border: 2px solid rgba(20, 17, 15, 0.2);
+        background: rgba(251, 246, 234, 0.98);
+        box-shadow: 0 8px 18px rgba(20, 17, 15, 0.08);
+      }
+
+      .m-dot[data-tone="danger"] {
+        border-color: rgba(180, 35, 24, 0.62);
+        background: rgba(180, 35, 24, 0.1);
+      }
+
+      .m-dot[data-tone="warn"] {
+        border-color: rgba(138, 106, 0, 0.6);
+        background: rgba(138, 106, 0, 0.1);
+      }
+
       .m-time {
+        width: 78px;
         border-radius: 14px;
         border: 2px solid rgba(180, 35, 24, 0.26);
         background: rgba(251, 246, 234, 0.88);
@@ -1542,6 +1591,35 @@
         color: rgba(20, 17, 15, 0.86);
         font-size: 12px;
         line-height: 1.15;
+      }
+
+      .m-time[data-tone="danger"] {
+        border-color: rgba(180, 35, 24, 0.58);
+        background: rgba(180, 35, 24, 0.08);
+      }
+
+      .m-time[data-tone="warn"] {
+        border-color: rgba(138, 106, 0, 0.54);
+        background: rgba(138, 106, 0, 0.08);
+      }
+
+      .m-card {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        overflow: hidden;
+        padding: 12px 12px;
+      }
+
+      .m-card[data-tone="danger"] {
+        border-color: rgba(180, 35, 24, 0.34);
+        box-shadow: 0 14px 34px rgba(180, 35, 24, 0.12);
+      }
+
+      .m-card[data-tone="warn"] {
+        border-color: rgba(138, 106, 0, 0.32);
+        box-shadow: 0 14px 34px rgba(138, 106, 0, 0.12);
       }
 
       .m-what b {
@@ -1636,6 +1714,7 @@
               <h2 data-m-daytitle>—</h2>
               <div class="m-daymeta" data-m-daytags></div>
             </div>
+            <div class="m-alertbar" data-m-alertbar hidden></div>
           </div>
           <ul class="m-slots" data-m-slots></ul>
         </section>
@@ -1657,7 +1736,7 @@
       </nav>
     </div>
 
-    <div class="legacy">
+    <div class="legacy" hidden aria-hidden="true">
     <header class="topbar">
       <div class="topbar-inner">
         <div class="brand">
@@ -2218,52 +2297,12 @@
       </div>
     </main>
     <a class="fab" href="#overview" aria-label="回到顶部">TOP</a>
-    <script>
-      (() => {
-        const hashToBase36 = (input) => {
-          let h = 2166136261;
-          for (let i = 0; i < input.length; i += 1) {
-            h ^= input.charCodeAt(i);
-            h = Math.imul(h, 16777619);
-          }
-          return (h >>> 0).toString(36).toUpperCase().padStart(7, "0");
-        };
-
-        const buttons = document.querySelectorAll("[data-action]");
-        for (const button of buttons) {
-          button.addEventListener("click", () => {
-            const action = button.getAttribute("data-action");
-            if (action === "print") {
-              window.print();
-            }
-          });
-        }
-
-        const serialEl = document.querySelector("[data-serial]");
-        if (serialEl) {
-          const title = document.title || "BEIJING";
-          serialEl.textContent = `BJ-${hashToBase36(title).slice(0, 7)}`;
-        }
-
-        const days = document.querySelectorAll(".day");
-        for (const day of days) {
-          const badge = day.querySelector(".day-title .badge");
-          const raw = (badge?.textContent ?? "").trim();
-          const n = Number.parseInt(raw.replace(/[^\d]/g, ""), 10);
-          if (Number.isFinite(n) && n > 0) {
-            day.dataset.day = String(n).padStart(2, "0");
-          }
-          const stub = document.createElement("div");
-          stub.className = "day-stub";
-          stub.textContent = "VALID";
-          stub.setAttribute("aria-hidden", "true");
-          day.appendChild(stub);
-        }
-      })();
-    </script>
     </div>
     <script>
       (() => {
+        const qs = (sel, root = document) => root.querySelector(sel);
+        const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
         const hashToBase36 = (input) => {
           let h = 2166136261;
           for (let i = 0; i < input.length; i += 1) {
@@ -2272,9 +2311,6 @@
           }
           return (h >>> 0).toString(36).toUpperCase().padStart(7, "0");
         };
-
-        const qs = (sel, root = document) => root.querySelector(sel);
-        const qsa = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
         const serialEl = qs("[data-m-serial]");
         if (serialEl) {
@@ -2292,6 +2328,7 @@
         const dayLineEl = qs("[data-m-dayline]");
         const dayTitleEl = qs("[data-m-daytitle]");
         const dayTagsEl = qs("[data-m-daytags]");
+        const alertBarEl = qs("[data-m-alertbar]");
         const daySlotsEl = qs("[data-m-slots]");
         const tipsEl = qs("[data-m-tips]");
 
@@ -2312,7 +2349,36 @@
         const tagTone = (t) => {
           if (!t) return "base";
           if (t.includes("预约")) return "danger";
-          if (t.includes("购票") || t.includes("换宿") || t.includes("早到") || t.includes("建议早到")) return "warn";
+          if (t.includes("换宿")) return "danger";
+          if (t.includes("购票") || t.includes("早到") || t.includes("建议早到") || t.includes("安检")) return "warn";
+          return "base";
+        };
+
+        const extractAlerts = (meta) => {
+          const out = [];
+          for (const t of meta || []) {
+            if (!t) continue;
+            if (t.includes("预约")) out.push({ tone: "danger", label: "需预约", text: `需预约 · ${t.replace(/^预约[:：]?\s*/g, "")}` });
+            else if (t.includes("换宿")) out.push({ tone: "danger", label: "高风险", text: `高风险 · ${t}` });
+            else if (t.includes("购票")) out.push({ tone: "warn", label: "购票", text: `购票 · ${t.replace(/^购票[:：]?\s*/g, "")}` });
+            else if (t.includes("早到") || t.includes("建议早到") || t.includes("安检"))
+              out.push({ tone: "warn", label: "早到", text: `建议 · ${t}` });
+          }
+          out.sort((a, b) => (a.tone === b.tone ? 0 : a.tone === "danger" ? -1 : 1));
+          const uniq = [];
+          const seen = new Set();
+          for (const a of out) {
+            if (seen.has(a.text)) continue;
+            seen.add(a.text);
+            uniq.push(a);
+          }
+          return uniq;
+        };
+
+        const slotTone = (s) => {
+          const blob = `${s.time || ""} ${s.head || ""} ${s.desc || ""}`;
+          if (blob.includes("预约") || blob.includes("换宿")) return "danger";
+          if (blob.includes("购票") || blob.includes("安检") || blob.includes("早到") || blob.includes("建议早到")) return "warn";
           return "base";
         };
 
@@ -2348,7 +2414,9 @@
           const a = document.createElement("a");
           a.className = "m-daycard";
           a.href = `#day-${d.num}`;
-          a.setAttribute("aria-label", `打开 Day ${d.num} 详情`);
+          const alerts = extractAlerts(d.meta);
+          const primary = alerts[0];
+          a.setAttribute("aria-label", `打开 Day ${d.num} 详情${primary ? `（${primary.label}）` : ""}`);
 
           const left = document.createElement("div");
           left.className = "m-dayno";
@@ -2357,9 +2425,21 @@
           const main = document.createElement("div");
           main.className = "m-daymain";
 
+          const head = document.createElement("div");
+          head.className = "m-dayhead";
+
           const t = document.createElement("div");
           t.className = "m-daytitle";
           t.textContent = `${d.date} ${d.title}`.trim();
+
+          head.appendChild(t);
+          if (primary) {
+            const flag = document.createElement("span");
+            flag.className = "m-flag";
+            flag.textContent = primary.label;
+            flag.dataset.tone = primary.tone;
+            head.appendChild(flag);
+          }
 
           const meta = document.createElement("div");
           meta.className = "m-daymeta";
@@ -2372,7 +2452,7 @@
             meta.appendChild(s);
           }
 
-          main.appendChild(t);
+          main.appendChild(head);
           main.appendChild(meta);
           a.appendChild(left);
           a.appendChild(main);
@@ -2437,6 +2517,23 @@
           if (!d) return;
           if (dayLineEl) dayLineEl.textContent = `DAY ${String(d.num).padStart(2, "0")} · ${d.date}`.trim();
           if (dayTitleEl) dayTitleEl.textContent = d.title || "当日安排";
+          if (alertBarEl) {
+            const alerts = extractAlerts(d.meta).slice(0, 3);
+            if (alerts.length === 0) {
+              alertBarEl.hidden = true;
+              alertBarEl.innerHTML = "";
+            } else {
+              alertBarEl.hidden = false;
+              alertBarEl.innerHTML = "";
+              for (const a of alerts) {
+                const chip = document.createElement("span");
+                chip.className = "m-alertchip";
+                chip.dataset.tone = a.tone;
+                chip.textContent = a.text;
+                alertBarEl.appendChild(chip);
+              }
+            }
+          }
           if (dayTagsEl) {
             dayTagsEl.innerHTML = "";
             for (const tag of pickTags(d.meta, 4)) {
@@ -2455,9 +2552,27 @@
               li.className = "m-slot";
               const inner = document.createElement("div");
               inner.className = "m-slot-inner";
+
+              const node = document.createElement("div");
+              node.className = "m-node";
+              const dot = document.createElement("span");
+              dot.className = "m-dot";
+
               const t = document.createElement("div");
               t.className = "m-time";
               t.textContent = s.time || "—";
+
+              const tone = slotTone(s);
+              if (tone !== "base") {
+                dot.dataset.tone = tone;
+                t.dataset.tone = tone;
+              }
+              node.appendChild(dot);
+
+              const card = document.createElement("div");
+              card.className = "m-card";
+              if (tone !== "base") card.dataset.tone = tone;
+
               const w = document.createElement("div");
               w.className = "m-what";
               const b = document.createElement("b");
@@ -2466,8 +2581,11 @@
               p.textContent = s.desc || "";
               w.appendChild(b);
               if (s.desc) w.appendChild(p);
+              card.appendChild(w);
+
+              inner.appendChild(node);
               inner.appendChild(t);
-              inner.appendChild(w);
+              inner.appendChild(card);
               li.appendChild(inner);
               daySlotsEl.appendChild(li);
             }
