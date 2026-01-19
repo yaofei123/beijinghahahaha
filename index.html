@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>北京八日深度游终极日程（2026.01.28 - 02.04）</title>
-    <meta name="description" content="北京 8 日深度游（2026.01.28-02.04）纯静态行程单：皇城核心区、北城园林与长城，含换宿、交通与预约提醒。" />
+    <meta name="description" content="北京 8 日深度游（2026.01.28-02.04）行程单：皇城核心区、北城园林与长城，含换宿、交通与预约提醒。" />
     <style>
       @font-face {
         font-family: "BJ Young Serif";
@@ -1665,6 +1665,46 @@
         display: grid;
         gap: 6px;
       }
+
+      /* Today & Now Highlighting */
+      .m-daycard[data-today="true"] {
+        border-color: var(--seal);
+        background: #fff;
+        box-shadow: 0 0 0 1px rgba(180, 35, 24, 0.08), 0 14px 34px rgba(180, 35, 24, 0.12);
+        position: relative;
+      }
+      .m-daycard[data-today="true"]::after {
+        content: "TODAY";
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--seal);
+        border: 1px solid rgba(180, 35, 24, 0.3);
+        background: rgba(180, 35, 24, 0.04);
+        padding: 2px 6px;
+        border-radius: 4px;
+        letter-spacing: 1px;
+      }
+
+      .m-slot[data-now="true"] .m-card {
+        border-color: var(--seal);
+        box-shadow: 0 0 0 2px rgba(180, 35, 24, 0.1), 0 14px 32px rgba(180, 35, 24, 0.12);
+        background: #fff;
+      }
+      .m-slot[data-now="true"] .m-dot {
+        background: var(--seal);
+        border-color: var(--seal);
+        box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.2);
+      }
+      .m-slot[data-now="true"] .m-time {
+        color: var(--seal);
+        border-color: rgba(180, 35, 24, 0.4);
+        background: rgba(180, 35, 24, 0.05);
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
@@ -2390,6 +2430,35 @@
           return chosen.map((x) => x.t);
         };
 
+        const getNowDate = () => {
+          const now = new Date();
+          return `${String(now.getMonth() + 1).padStart(2, "0")}.${String(now.getDate()).padStart(2, "0")}`;
+        };
+
+        const getNowMins = () => {
+          const now = new Date();
+          return now.getHours() * 60 + now.getMinutes();
+        };
+
+        const parseSlotRange = (str) => {
+          const mins = (h, m) => Number(h) * 60 + Number(m || 0);
+          if (!str) return [-1, -1];
+          if (str.includes("晚上")) return [18 * 60, 24 * 60]; // 18:00 - 24:00
+          
+          const rangeMatch = str.match(/(\d{1,2})[:：](\d{2})\s*[-–~]\s*(\d{1,2})[:：](\d{2})/);
+          if (rangeMatch) {
+            return [mins(rangeMatch[1], rangeMatch[2]), mins(rangeMatch[3], rangeMatch[4])];
+          }
+          
+          const singleMatch = str.match(/(\d{1,2})[:：](\d{2})/);
+          if (singleMatch) {
+            const start = mins(singleMatch[1], singleMatch[2]);
+            if (str.includes("前")) return [0, start];
+            return [start, start + 60]; // Default 1h duration
+          }
+          return [-1, -1];
+        };
+
         const parseDay = (dayEl) => {
           const badgeText = (qs(".day-title .badge", dayEl)?.textContent ?? "").trim();
           const num = Number.parseInt(badgeText.replace(/[^\d]/g, ""), 10);
@@ -2414,6 +2483,11 @@
           const a = document.createElement("a");
           a.className = "m-daycard";
           a.href = `#day-${d.num}`;
+          
+          if (d.date.startsWith(getNowDate())) {
+            a.setAttribute("data-today", "true");
+          }
+
           const alerts = extractAlerts(d.meta);
           const primary = alerts[0];
           a.setAttribute("aria-label", `打开 Day ${d.num} 详情${primary ? `（${primary.label}）` : ""}`);
@@ -2547,9 +2621,22 @@
           }
           if (daySlotsEl) {
             daySlotsEl.innerHTML = "";
+            const isToday = d.date.startsWith(getNowDate());
+            const nowMins = getNowMins();
+            let hasMarked = false;
+
             for (const s of d.slots) {
               const li = document.createElement("li");
               li.className = "m-slot";
+              
+              if (isToday && !hasMarked) {
+                const [start, end] = parseSlotRange(s.time);
+                if (start !== -1 && nowMins >= start && nowMins < end) {
+                  li.setAttribute("data-now", "true");
+                  hasMarked = true;
+                }
+              }
+
               const inner = document.createElement("div");
               inner.className = "m-slot-inner";
 
@@ -2592,6 +2679,25 @@
           }
         };
 
+        const autoScrollToCurrent = () => {
+          const isOverview = !location.hash || location.hash === "#overview";
+          if (isOverview) {
+            const todayCard = qs(".m-daycard[data-today='true']");
+            if (todayCard) {
+              setTimeout(() => {
+                todayCard.scrollIntoView({ behavior: "smooth", block: "center" });
+              }, 100);
+            }
+          } else if (location.hash.startsWith("#day-")) {
+            const nowSlot = qs(".m-slot[data-now='true']");
+            if (nowSlot) {
+              setTimeout(() => {
+                nowSlot.scrollIntoView({ behavior: "smooth", block: "center" });
+              }, 100);
+            }
+          }
+        };
+
         const route = () => {
           const h = (location.hash || "").toLowerCase();
           const dayMatch = h.match(/^#day-(\d+)$/);
@@ -2599,6 +2705,7 @@
             const num = Number.parseInt(dayMatch[1], 10);
             renderDay(num);
             setActive("day");
+            autoScrollToCurrent();
             return;
           }
           if (h === "#tips") {
@@ -2606,6 +2713,7 @@
             return;
           }
           setActive("overview");
+          autoScrollToCurrent();
         };
 
         for (const tab of qsa("[data-m-nav]")) {
