@@ -1425,8 +1425,66 @@
       .m-tabs {
         width: min(480px, 100%);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 10px;
+      }
+
+      .m-checklist {
+        display: grid;
+        gap: 12px;
+      }
+
+      .m-check-category {
+        border-radius: 18px;
+        border: 1px solid rgba(20, 17, 15, 0.16);
+        background: rgba(255, 255, 255, 0.66);
+        box-shadow: 0 14px 32px rgba(20, 17, 15, 0.1);
+        overflow: hidden;
+        padding: 14px;
+      }
+
+      .m-check-title {
+        font-family: var(--font-display);
+        font-size: 16px;
+        margin-bottom: 12px;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 1px solid rgba(20, 17, 15, 0.1);
+        padding-bottom: 8px;
+      }
+
+      .m-check-items {
+        display: grid;
+        gap: 10px;
+      }
+
+      .m-check-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 13px;
+        color: var(--ink-2);
+        cursor: pointer;
+        padding: 2px 0;
+      }
+
+      .m-check-item input {
+        margin-top: 3px;
+        accent-color: var(--seal);
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+      }
+
+      .m-check-item span {
+        line-height: 1.5;
+      }
+
+      .m-check-item b {
+        font-weight: 700;
+        color: var(--ink);
       }
 
       .m-tab {
@@ -1766,11 +1824,120 @@
           </div>
           <div class="m-tips" data-m-tips></div>
         </section>
+
+        <section class="m-screen" id="m-mustbring" aria-label="必带清单">
+          <div class="m-section-title">
+            <h2>必带清单</h2>
+            <span>Checklist</span>
+          </div>
+          <div class="m-checklist">
+            
+            <div class="m-check-category">
+              <div class="m-check-title">🎒 证件与钱财</div>
+              <div class="m-check-items">
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>身份证</b> (原件 + 手机照片备份)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>学生证</b> (如有，景点半价)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>少量现金</b> (备用，部分老店只收现金)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="m-check-category">
+              <div class="m-check-title">🛡️ 安全与药箱 (独行重点)</div>
+              <div class="m-check-items">
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>阻门器</b> (住酒店神器，强烈建议)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>基础药物</b> (感冒/肠胃/布洛芬/创可贴)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>口罩 & 酒精湿巾</b> (公共交通防护)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="m-check-category">
+              <div class="m-check-title">💄 洗漱与护肤 (北京极干)</div>
+              <div class="m-check-items">
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>润唇膏 & 护手霜</b> (随时补涂，别嫌麻烦)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>高保湿面霜/身体乳</b> (对抗暖气房干燥)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>防晒霜</b> (冬春紫外线依然强)</span>
+                </label>
+                 <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>洗漱小样</b> (牙刷/毛巾建议自带)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="m-check-category">
+              <div class="m-check-title">🔌 电子设备</div>
+              <div class="m-check-items">
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>大容量充电宝</b> (导航拍照耗电快)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>自拍杆/三脚架</b> (一个人也要拍美照)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>耳机</b> (降噪款，地铁/休息时用)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="m-check-category">
+              <div class="m-check-title">🧣 衣物与杂物</div>
+              <div class="m-check-items">
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>舒适平底鞋</b> (日行2万步的基础)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>帽子/围巾/手套</b> (防风保暖三件套)</span>
+                </label>
+                <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>保温杯</b> (随时喝口热水很幸福)</span>
+                </label>
+                 <label class="m-check-item">
+                  <input type="checkbox">
+                  <span><b>暖宝宝</b> (怕冷星人必备)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </main>
 
       <nav class="m-bottomnav" aria-label="底部导航">
         <div class="m-tabs">
           <button class="m-tab" type="button" data-m-nav="overview" data-on="true">总览</button>
+          <button class="m-tab" type="button" data-m-nav="mustbring" data-on="false">必带</button>
           <button class="m-tab" type="button" data-m-nav="tips" data-on="false">提醒</button>
         </div>
       </nav>
@@ -2362,6 +2529,7 @@
           overview: qs("#m-overview"),
           day: qs("#m-day"),
           tips: qs("#m-tips"),
+          mustbring: qs("#m-mustbring"),
         };
 
         const dayListEl = qs("[data-m-daylist]");
@@ -2712,6 +2880,10 @@
             setActive("tips");
             return;
           }
+          if (h === "#mustbring") {
+            setActive("mustbring");
+            return;
+          }
           setActive("overview");
           autoScrollToCurrent();
         };
@@ -2721,6 +2893,10 @@
             const key = tab.getAttribute("data-m-nav");
             if (key === "tips") {
               location.hash = "#tips";
+              return;
+            }
+            if (key === "mustbring") {
+              location.hash = "#mustbring";
               return;
             }
             location.hash = "#overview";
